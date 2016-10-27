@@ -1,0 +1,210 @@
+<current>
+    <city id="1277333" name="Bangalore">
+        <coord lon="77.6" lat="12.98"></coord>
+        <country>IN</country>
+        <sun rise="2016-10-25T00:41:42" set="2016-10-25T12:25:13"></sun>
+    </city>
+    <temperature value="292.338" min="292.338" max="292.338" unit="kelvin"></temperature>
+    <humidity value="69" unit="%"></humidity>
+    <pressure value="926.22" unit="hPa"></pressure>
+    <wind>
+        <speed value="2.42" name="Light breeze"></speed>
+        <gusts></gusts>
+        <direction value="4.50131" code="N" name="North"></direction>
+    </wind>
+    <clouds value="0" name="clear sky"></clouds>
+    <visibility></visibility>
+    <precipitation mode="no"></precipitation>
+    <weather number="800" value="clear sky" icon="01n"></weather>
+    <lastupdate value="2016-10-25T16:51:49"></lastupdate>
+</current>
+
+<current>
+<city id="1275004" name="Kolkata">
+    <coord lon="88.37" lat="22.57"></coord>
+    <country>IN</country>
+    <sun rise="2016-10-25T00:07:45" set="2016-10-25T11:32:53"></sun>
+</city>
+<temperature value="297.425" min="297.425" max="297.425" unit="kelvin"></temperature>
+<humidity value="79" unit="%"></humidity>
+<pressure value="1018.25" unit="hPa"></pressure>
+<wind>
+    <speed value="2.02" name="Light breeze"></speed>
+    <gusts></gusts>
+    <direction value="321.501" code="NW" name="Northwest"></direction>
+</wind>
+<clouds value="0" name="clear sky"></clouds>
+<visibility></visibility>
+<precipitation mode="no"></precipitation>
+<weather number="800" value="clear sky" icon="01n"></weather>
+<lastupdate value="2016-10-25T15:56:09"></lastupdate>
+</current>
+
+<current>
+<city id="1275339" name="Mumbai">
+    <coord lon="72.85" lat="19.01"></coord>
+    <country>IN</country>
+    <sun rise="2016-10-25T01:06:17" set="2016-10-25T12:38:35"></sun>
+</city>
+<temperature value="300.436" min="300.436" max="300.436" unit="kelvin"></temperature>
+<humidity value="84" unit="%"></humidity>
+<pressure value="1022.63" unit="hPa"></pressure>
+<wind>
+    <speed value="6.1" name="Moderate breeze"></speed>
+    <gusts></gusts>
+    <direction value="331.001" code="NNW" name="North-northwest"></direction>
+</wind>
+<clouds value="0" name="clear sky"></clouds>
+<visibility></visibility>
+<precipitation mode="no"></precipitation>
+<weather number="800" value="clear sky" icon="01d"></weather>
+<lastupdate value="2016-10-25T12:06:16"></lastupdate>
+</current>
+
+
+<current>
+<city id="1273294" name="Delhi">
+    <coord lon="77.22" lat="28.67"></coord>
+    <country>IN</country>
+    <sun rise="2016-10-25T00:58:41" set="2016-10-25T12:11:06"></sun>
+</city>
+<temperature value="302.211" min="302.211" max="302.211" unit="kelvin"></temperature>
+<humidity value="37" unit="%"></humidity>
+<pressure value="995.88" unit="hPa"></pressure>
+<wind>
+    <speed value="3.25" name="Light breeze"></speed>
+    <gusts></gusts>
+    <direction value="315.001" code="NW" name="Northwest"></direction>
+</wind>
+<clouds value="0" name="clear sky"></clouds>
+<visibility></visibility>
+<precipitation mode="no"></precipitation>
+<weather number="800" value="clear sky" icon="01d"></weather>
+<lastupdate value="2016-10-25T11:19:14"></lastupdate>
+</current>
+
+<current>
+<city id="2988507" name="Paris">
+    <coord lon="2.35" lat="48.85"></coord>
+    <country>FR</country>
+    <sun rise="2016-10-25T06:27:26" set="2016-10-25T16:40:56"></sun>
+</city>
+<temperature value="284.618" min="284.618" max="284.618" unit="kelvin"></temperature>
+<humidity value="100" unit="%"></humidity>
+<pressure value="1023.15" unit="hPa"></pressure>
+<wind>
+    <speed value="1.61" name="Light breeze"></speed>
+    <gusts></gusts>
+    <direction value="318.505" code="NW" name="Northwest"></direction>
+</wind>
+<clouds value="92" name="overcast clouds"></clouds>
+<visibility></visibility>
+<precipitation mode="no"></precipitation>
+<weather number="804" value="overcast clouds" icon="04d"></weather>
+<lastupdate value="2016-10-25T08:36:10"></lastupdate>
+</current>
+
+<current>
+<city id="524901" name="Moscow">
+    <coord lon="37.62" lat="55.75"></coord>
+    <country>RU</country>
+    <sun rise="2016-10-25T04:22:52" set="2016-10-25T14:03:08"></sun>
+</city>
+<temperature value="273.1" min="273.1" max="273.1" unit="kelvin"></temperature>
+<humidity value="68" unit="%"></humidity>
+<pressure value="1034.86" unit="hPa"></pressure>
+<wind>
+    <speed value="5.79" name="Moderate breeze"></speed>
+    <gusts></gusts>
+    <direction value="166.501" code="SSE" name="South-southeast"></direction>
+</wind>
+<clouds value="8" name="clear sky"></clouds>
+<visibility></visibility>
+<precipitation mode="no"></precipitation>
+<weather number="800" value="clear sky" icon="02n"></weather>
+<lastupdate value="2016-10-25T16:16:28"></lastupdate>
+</current>
+
+<current>
+<city id="5128581" name="New York">
+    <coord lon="-74.01" lat="40.71"></coord>
+    <country>US</country>
+    <sun rise="2016-10-25T11:19:32" set="2016-10-25T21:59:47"></sun>
+</city>
+<temperature value="283.25" min="283.25" max="283.25" unit="kelvin"></temperature>
+<humidity value="85" unit="%"></humidity>
+<pressure value="1032.84" unit="hPa"></pressure>
+<wind>
+    <speed value="5.09" name="Gentle Breeze"></speed>
+    <gusts></gusts>
+    <direction value="303.501" code="WNW" name="West-northwest"></direction>
+</wind>
+<clouds value="12" name="few clouds"></clouds>
+<visibility></visibility>
+<precipitation mode="no"></precipitation>
+<weather number="801" value="few clouds" icon="02d"></weather>
+<lastupdate value="2016-10-25T15:02:30"></lastupdate>
+</current>
+
+<current>
+<city id="5368361" name="Los Angeles">
+    <coord lon="-118.24" lat="34.05"></coord>
+    <country>US</country>
+    <sun rise="2016-10-25T14:07:15" set="2016-10-26T01:06:02"></sun>
+</city>
+<temperature value="282.743" min="282.743" max="282.743" unit="kelvin"></temperature>
+<humidity value="89" unit="%"></humidity>
+<pressure value="965.27" unit="hPa"></pressure>
+<wind>
+    <speed value="0.91" name="Calm"></speed>
+    <gusts></gusts>
+    <direction value="62.5052" code="ENE" name="East-northeast"></direction>
+</wind>
+<clouds value="0" name="clear sky"></clouds>
+<visibility></visibility>
+<precipitation mode="no"></precipitation>
+<weather number="800" value="clear sky" icon="01n"></weather>
+<lastupdate value="2016-10-25T10:23:22"></lastupdate>
+</current>
+
+<current>
+<city id="4930956" name="Boston">
+    <coord lon="-71.06" lat="42.36"></coord>
+    <country>US</country>
+    <sun rise="2016-10-25T11:10:01" set="2016-10-25T21:45:43"></sun>
+</city>
+<temperature value="280.243" min="280.243" max="280.243" unit="kelvin"></temperature>
+<humidity value="100" unit="%"></humidity>
+<pressure value="1028.74" unit="hPa"></pressure>
+<wind>
+    <speed value="7.08" name="Moderate breeze"></speed>
+    <gusts></gusts>
+    <direction value="303.005" code="WNW" name="West-northwest"></direction>
+</wind>
+<clouds value="0" name="clear sky"></clouds>
+<visibility></visibility>
+<precipitation mode="no"></precipitation>
+<weather number="800" value="clear sky" icon="01n"></weather>
+<lastupdate value="2016-10-25T09:51:45"></lastupdate>
+</current>
+
+<current>
+<city id="1003764" name="Frankfort">
+    <coord lon="28.48" lat="-27.27"></coord>
+    <country>ZA</country>
+    <sun rise="2016-10-25T03:20:02" set="2016-10-25T16:20:22"></sun>
+</city>
+<temperature value="301.025" min="301.025" max="301.025" unit="kelvin"></temperature>
+<humidity value="32" unit="%"></humidity>
+<pressure value="858.96" unit="hPa"></pressure>
+<wind>
+    <speed value="1.27" name="Calm"></speed>
+    <gusts></gusts>
+    <direction value="258.001" code="WSW" name="West-southwest"></direction>
+</wind>
+<clouds value="0" name="clear sky"></clouds>
+<visibility></visibility>
+<precipitation mode="no"></precipitation>
+<weather number="800" value="clear sky" icon="01d"></weather>
+<lastupdate value="2016-10-25T15:59:04"></lastupdate>
+</current>
