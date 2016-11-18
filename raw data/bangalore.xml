@@ -6,7 +6,7 @@
             <sun rise="2016-10-31T00:43:11" set="2016-10-31T12:22:56"></sun>
         </city>
         <temperature value="295.66" min="295.66" max="295.66" unit="kelvin"></temperature>
-        <humidity value="83" unit="%"></humidity>
+<humidity value="83" unit="%"></humidity>
         <pressure value="929.71" unit="hPa"></pressure>
         <wind>
             <speed value="3.6" name="Gentle Breeze"></speed>
