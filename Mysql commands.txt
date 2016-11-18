@@ -1,0 +1,13 @@
+create table city
+(
+cityid int not null,
+cityname varchar(40),
+countrycode char(2),
+primary key(cityid)
+);
+create table weather_type
+(
+wid int not null,
+wtype varchar(40),
+primary key(wid)
+);
