@@ -5,12 +5,14 @@ cityname varchar(40),
 countrycode char(2),
 primary key(cityid)
 );
+
 create table weather_type
 (
 wid int not null,
 wtype varchar(40),
 primary key(wid)
 );
+
 create table observation
 (
 id int not null,
@@ -25,6 +27,7 @@ primary key(oid),
 foreign key(id) references city(cityid),
 foreign key(wid) references weather_type(wid)
 );
+
 create table wind
 (
 oid int not null,
@@ -34,6 +37,7 @@ direction varchar(4),
 degree float,
 foreign key(oid) references observation(oid)
 );
+
 create table temperature
 (
 oid int not null,

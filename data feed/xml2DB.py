@@ -5,9 +5,9 @@ import pymysql
 
 # Connect to the database
 connection = pymysql.connect(host='localhost',
-                             user='jubin',
-                             password='jubin',
-                             db='testing',
+                             user='admin',
+                             password='admin',
+                             db='weather',
                              charset='utf8',
                              cursorclass=pymysql.cursors.DictCursor)
 cursor= connection.cursor()
@@ -28,28 +28,21 @@ for ele in array:
         city_id=x.city['id']
         city_name = x.city['name']
         country_code = x.country.string
-        #print city_id+city_name+country_code
 
         rise = x.sun['rise']
         set_t = x.sun['set']
-        # print(rise +"\t"+set)
 
         recordtime = x.lastupdate['value']
-        # print (recordtime)
 
         humidity_value = x.humidity['value']
         humidity_unit = x.humidity['unit']
-        #print (humidity_value+humidity_unit)
-
 
         pressure_value = x.pressure['value']
         pressure_unit = x.pressure['unit']
-        #print (pressure_value+pressure_unit)
 
         if(x.temperature['unit']=='kelvin'):
             temp_k =x.temperature['value']
             uni=temp_k.encode('utf8')
-            # print type(uni)
 
         wind = x.wind
         w_speed = wind.speed['value']
@@ -58,9 +51,6 @@ for ele in array:
         w_degree = wind.direction['value']
 
         weth_id = x.weather['number']
-        print weth_id
-        #print (w_speed+w_type+w_degree+w_direction)
-        #print "\n"
         flag=flag+1
         sql1 = "INSERT INTO `observation` (`id`, `oid`, `wid`, `risetime`, `settime`, `recordtime`, `humidity`, `preasure`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s )"
         cursor.execute(sql1, (int(city_id), flag, int(weth_id), rise, set_t, recordtime, humidity_value, pressure_value))

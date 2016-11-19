@@ -5,9 +5,9 @@ import pymysql
 
 # Connect to the database
 connection = pymysql.connect(host='localhost',
-                             user='jubin',
-                             password='jubin',
-                             db='testing',
+                             user='admin',
+                             password='admin',
+                             db='weather',
                              charset='utf8',
                              cursorclass=pymysql.cursors.DictCursor)
 
