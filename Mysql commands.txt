@@ -14,7 +14,7 @@ primary key(wid)
 create table observation
 (
 id int not null,
-oid int not null auto_increment,
+oid int not null,
 wid int not null,
 risetime varchar(20),
 settime varchar(20),
