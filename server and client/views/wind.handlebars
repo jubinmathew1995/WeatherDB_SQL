@@ -1,0 +1,24 @@
+{{#each tab}}
+    <form style="display: inline-block" method="POST" action="/wind">
+        <input class="btn btn-primary" name="tables" type="Submit" value="{{this.Tables_in_weather}}">
+    </form>
+{{/each}}
+<h3>{{name}} table</h3>
+<table align=center>
+    <tr>
+        {{#each fields}}
+            <th>{{this.name}}</th>
+        {{/each}}
+    </tr>
+    {{#each rows}}
+        <tr>
+            <td>{{this.oid}}</td>
+            <td>{{this.speed}}</td>
+            <td>{{this.type}}</td>
+            <td>{{this.direction}}</td>
+            <td>{{this.degree}}</td>
+        </tr>
+    {{/each}}
+
+
+</table>
