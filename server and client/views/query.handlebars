@@ -1,0 +1,32 @@
+{{#if que}}
+{{else}}
+    <h3>No Query to display.</h3>
+{{/if}}
+
+<form method="POST" action="/query">
+    <textarea type="text" class="form-control" name="data" style="width: 900px; height: 100px" placeholder="Query" required="required"></textarea>
+    <input class="btn btn-primary" type="Submit">
+</form>
+{{#if que}}
+    <h3>{{que}}</h3>
+{{else if err}}
+    <h3>{{err}}</h3>
+{{/if}}
+{{#if fields}}
+    <table align=center>
+        <tr>
+            {{#each fields}}
+                <th>{{this.name}}</th>
+            {{/each}}
+        </tr>
+        {{#forIn rows}}
+            {{this}}
+        {{/forIn}}
+    </table>
+{{/if}}
+<script>
+    Handlebars.registerHelper('setIndex', function(value){
+        console.log(this.name);
+    });
+</script>
+
