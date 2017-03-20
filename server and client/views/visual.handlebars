@@ -1,1 +1,35 @@
-this is the visual query page.
+<div style="margin-left: 20px">
+    {{#each tab}}
+        <form style="display: inline-block" method="POST" action="/visual">
+            <input class="btn btn-primary" name="tables" type="Submit" value="{{this.cityname}}">
+        </form>
+    {{/each}}
+</div>
+<center><h3>{{name}}</h3></center>
+<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+<p style="text-align:center">Time Scale (31-Oct to 9-Nov)</p>
+<script type="text/javascript">
+    var arr=[];
+    {{#each val}}
+        var obj={"x":{{this.x}},"y":{{this.y}} };
+        arr.push(obj);
+    {{/each}}
+    console.log(arr);
+    var temp = arr;
+    window.onload = function() {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            title: {
+                text: "Temperature Chart"
+            },
+            axisX: {
+                interval: 10
+            },
+            data: [{
+                type: "line",
+                dataPoints: temp
+            }]
+        });
+        chart.render();
+    }
+</script>
+<script src="js/canvasjs.min.js"></script>

@@ -4,7 +4,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
 var exphbs  = require('express-handlebars');
-var helpers = require('handlebars-helpers')();
 var app = express();
 
 // Handlebars setup
@@ -25,8 +24,8 @@ app.use(bodyParser.json());
 //Mysql database connection
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'admin',
-  password : 'admin',
+  user     : 'root',
+  password : '',
   database : 'weather'
 });
 connection.connect(function(err){
@@ -36,37 +35,6 @@ if(!err) {
     console.log("Error connecting database ... ");    
 }
 });
-//functions
-data_table='city';
-schema_table='city';
-
-//helpers
-/**
- * Block helper that iterates over the properties of
- * an object, exposing each key and value on the context.
- *
- * @name .forIn
- * @param {Object} `context`
- * @param {Object} `options`
- * @return {String}
- * @block
- * @api public
- */
-
-helpers.forIn = function(obj, options) {
-    if (!utils.isOptions(options)) {
-        return obj.inverse(this);
-    }
-
-    var data = utils.createFrame(options, options.hash);
-    var result = '';
-
-    for (var key in obj) {
-        data.key = key;
-        result += options.fn(obj[key], {data: data});
-    }
-    return result;
-};
 
 //Routing 
 app.get('/', function(req,res){
@@ -252,7 +220,6 @@ app.post('/query', function(req,res){
     query=req.body.data;
     connection.query(query, function(err, rows1, fields1) {
         if (!err){
-            console.log(fields1,rows1);
             res.render('query', {fields:fields1, rows:rows1});
         }
         else
@@ -263,19 +230,41 @@ app.post('/query', function(req,res){
 });
 app.get('/visual', function(req,res){
     sql="select t.val_c,o.recordtime from city c,temperature t,observation o where " +
-        "c.cityid=o.id and o.oid=t.oid and c.cityname='Bangalore'";
-    connection.query(sql, function(err, rows1, fields1) {
-        if (!err){
-            console.log(rows1);
-            var arr=[]
-            for (i in rows1){
-                var obj={"x":Number(i),"y":rows1[i].val_c};
-                arr.push(obj);
+        "c.cityid=o.id and o.oid=t.oid and c.cityname='Delhi'";
+    connection.query('select * from city', function(err, rows, fields) {
+        connection.query(sql, function (err, rows1, fields1) {
+            if (!err) {
+                var arr = [];
+                var x = 1;
+                for (i in rows1) {
+
+                    var obj = {"x": x, "y": rows1[i].val_c};
+                    x = x + 1;
+                    arr.push(obj);
+                }
+                res.render('visual', {val: arr, tab:rows});
             }
-            console.log(arr);
-        }
+        });
     });
-    res.render('visual')
+});
+app.post('/visual', function(req,res){
+    sql="select t.val_c,o.recordtime from city c,temperature t,observation o where " +
+        "c.cityid=o.id and o.oid=t.oid and c.cityname='"+req.body.tables+"'";
+    connection.query('select * from city', function(err, rows, fields) {
+        connection.query(sql, function (err, rows1, fields1) {
+            if (!err) {
+                var arr = [];
+                var x = 1;
+                for (i in rows1) {
+
+                    var obj = {"x": x, "y": rows1[i].val_c};
+                    x = x + 1;
+                    arr.push(obj);
+                }
+                res.render('visual', {val: arr, tab:rows, name:req.body.tables});
+            }
+        });
+    });
 });
 
 // Boot server
